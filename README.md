@@ -1,4 +1,5 @@
-![CI](https://github.com/deminsvd/dom/workflows/CI/badge.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/n29o0yhpestgioej?svg=true)](https://ci.appveyor.com/project/deminsvd/dom)
+
 
 
 # Домашнее задание к занятию "2. DOM"
