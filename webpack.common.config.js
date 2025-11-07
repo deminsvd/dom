@@ -1,34 +1,32 @@
-const ESLintPlugin = require('eslint-webpack-plugin');
+import ESLintPlugin from 'eslint-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-
-module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },
-            {
-                test: /\.css$/,
-                use:[
-                    MiniCSSExtractPlugin.loader,
-                    'css-loader'
-                ] 
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        }),
-        new MiniCSSExtractPlugin(),
-        new ESLintPlugin({
-            extensions: ['js'], 
-            exclude: 'node_modules', 
-        }),
-    ]
-}
+export default {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCSSExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new MiniCSSExtractPlugin(),
+    new ESLintPlugin({
+      extensions: ['js'],
+      exclude: 'node_modules',
+    }),
+  ],
+};

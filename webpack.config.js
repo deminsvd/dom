@@ -1,14 +1,10 @@
-const { merge } = require('webpack-merge');
+import { merge } from 'webpack-merge';
+import commonConfig from './webpack.common.config.js';
+import productionConfig from './webpack.production.config.js';
+import developmentConfig from './webpack.development.config.js';
 
-const commonConfig = require('./webpack.common.config.js');
-
-const productionConfig = require('./webpack.production.config.js');
-
-const developmentConfig = require('./webpack.development.config.js');
-
-module.exports = (env, args) => {
-
-  switch(args.mode) {
+export default (env, args) => {
+  switch (args.mode) {
     case 'development':
       return merge(commonConfig, developmentConfig);
     case 'production':
@@ -16,4 +12,4 @@ module.exports = (env, args) => {
     default:
       throw new Error('No matching configuration was found!');
   }
-}
+};

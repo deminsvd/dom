@@ -1,6 +1,6 @@
-module.exports = {
-    mode: 'development',
-    devServer: {
-        port: 9000,
-    }
-}
+export default {
+  mode: 'development',
+  devServer: {
+    port: 9000,
+  },
+};
