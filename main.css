@@ -1,0 +1,15 @@
+  #gameField {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 10 колонок по 40px */
+    gap: 5px; /* зазор между ячейками */
+  }
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  margin: 0 15px 30px;
+  background: gray;
+  position: relative;
+  border-radius: 50%;
+}
