@@ -1,22 +1,15 @@
-.hole-game {
-  width: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  #gameField {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 10 колонок по 40px */
+    gap: 5px; /* зазор между ячейками */
+  }
 
-.hole {
-  width: 150px;
-  height: 150px;
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
   margin: 0 15px 30px;
   background: gray;
+  position: relative;
   border-radius: 50%;
-}
-
-.hole_has-mole {
-  background-image: url(https://github.com/netology-code/ahj-homeworks/raw/AHJ-50/dom/pic/goblin.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: brown;
 }
