@@ -1,4 +1,4 @@
-https://github.com/deminsvd/dom
+https://deminsvd.github.io/dom/
 
 
 [![Workflow Status](https://github.com/deminsvd/dom/actions/workflows/main.yml/badge.svg)](https://github.com/deminsvd/dom/actions/workflows/main.yml)
